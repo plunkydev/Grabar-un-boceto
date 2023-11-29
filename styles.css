@@ -1,0 +1,15 @@
+/* body {
+    height: 100vh;
+} */
+
+.lienzo-continer {
+    display: grid;
+    border: 3px solid black;
+    width: 400px;
+    height: 400px;
+}
+
+
+.pixelStyle {
+    border: 0.5px solid rgb(213, 191, 191);
+}

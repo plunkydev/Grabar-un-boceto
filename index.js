@@ -1,4 +1,22 @@
 //apuntar a inputs
 const pixeles = document.querySelector("#pixeles");
 const lienzo = document.querySelector(".lienzo-continer");
+let length = Number(pixeles.value);
+
+function setupGrid(size) {
+    lienzo.style.gridTemplateColumns = `repeat(${size}, 1fr)`
+    lienzo.style.gridTemplateRows = `repeat(${size}, 1fr)`
+    for (let i = 0; i < size * size; i++) {
+    const gridElement = document.createElement('div')
+    gridElement.classList.add('pixelStyle')
+    lienzo.appendChild(gridElement)
+    }
+}
+window.onload = () => {
+    setupGrid(16)
+    
+}
+
+
+
 
