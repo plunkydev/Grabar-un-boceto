@@ -14,7 +14,7 @@ function setupGrid(size) {
     }
 }
 
-const gridLength = (size) => {
+const gridSize = (size) => {
     size = pixeles.value;
     let padre = document.getElementById('idLienzo');
     while (padre.firstChild) {
@@ -23,7 +23,7 @@ const gridLength = (size) => {
     setupGrid(size)
 };
 
-pixeles.addEventListener('change', gridLength);
+pixeles.addEventListener('change', gridSize);
 window.onload = () => {
     setupGrid(16)
 }
