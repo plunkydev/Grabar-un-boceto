@@ -23,10 +23,9 @@ const gridLength = (size) => {
     setupGrid(size)
 };
 
-pixeles.addEventListener('change', gridLength)
+pixeles.addEventListener('change', gridLength);
 window.onload = () => {
     setupGrid(16)
-    
 }
 
 
