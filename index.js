@@ -9,8 +9,15 @@ function setupGrid(size) {
     lienzo.style.gridTemplateRows = `repeat(${size}, 1fr)`
     for (let i = 0; i < size * size; i++) {
         const gridElement = document.createElement('div');    
-        gridElement.classList.add('pixelStyle')
-        lienzo.appendChild(gridElement)
+        gridElement.classList.add('pixelStyle');
+        lienzo.appendChild(gridElement);
+        gridElement.addEventListener('mouseenter', function(event) {
+            if (event.buttons === 1) {
+                gridElement.classList.add("black")
+                
+            }
+            
+        });
     }
 }
 
@@ -22,6 +29,9 @@ const gridSize = (size) => {
     }
     setupGrid(size)
 };
+
+
+
 
 pixeles.addEventListener('change', gridSize);
 window.onload = () => {
