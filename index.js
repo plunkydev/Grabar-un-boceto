@@ -30,6 +30,9 @@ const gridSize = (size) => {
     setupGrid(size)
 };
 const setColor = (color) => {
+    if (color === "#fff") {
+        color = "#fff"
+    }
     let padre = document.getElementById('idLienzo');
     let hijos = padre.querySelectorAll('div');
     for (let i = 0; i < hijos.length; i++) {
@@ -49,7 +52,3 @@ pixeles.addEventListener('change', gridSize);
 window.onload = () => {
     setupGrid(33)
 }
-
-
-
-
