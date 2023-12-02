@@ -46,7 +46,7 @@ colors.addEventListener('change', function(event) {
 });
 pixeles.addEventListener('change', gridSize);
 window.onload = () => {
-    setupGrid(16)
+    setupGrid(33)
 }
 
 
