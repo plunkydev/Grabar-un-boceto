@@ -22,6 +22,7 @@ function setupGrid(size) {
 
 const gridSize = (size) => {
     size = pixeles.value;
+    colors.value = "#000000";
     let padre = document.getElementById('idLienzo');
     while (padre.firstChild) {
         padre.removeChild(padre.firstChild);
