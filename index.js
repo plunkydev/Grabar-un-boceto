@@ -55,7 +55,7 @@ const setColor = (color) => {
 };
 
 colors.addEventListener('change', function(event) {
-    const selectedColor = event.target.value; // Obtener el valor seleccionado
+    const selectedColor = event.target.value; 
     setColor(selectedColor);
 });
 pixeles.addEventListener('change', gridSize);
