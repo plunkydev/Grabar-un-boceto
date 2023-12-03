@@ -3,7 +3,12 @@ const pixeles = document.querySelector("#pixeles");
 const colors = document.querySelector("#color");
 const lienzo = document.querySelector(".lienzo-continer");
 const main = document.querySelector(".main-continer");
+let random = '';
 
+const isRandom = () => {
+    random = 'activo';
+    setColor(random);
+}
 
 function setupGrid(size) {
     lienzo.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -30,7 +35,7 @@ const gridSize = (size) => {
     setupGrid(size)
 };
 const setColor = (color) => {
-    if (color === "#fff") {
+    if(color === "#fff") { // esta condicion es activada por el borrador
         color = "#fff"
     }
     let padre = document.getElementById('idLienzo');
@@ -38,7 +43,12 @@ const setColor = (color) => {
     for (let i = 0; i < hijos.length; i++) {
         hijos[i].addEventListener('mouseenter', function(event) {
             if (event.buttons === 1) {
-                hijos[i].setAttribute('style', `background: ${color};`);
+                if (color === "activo") {
+                    let h = Math.floor(Math.random() * 331);
+                    hijos[i].setAttribute('style', `background: hsl(${h}, 75%, 50%);`);
+                } else {
+                    hijos[i].setAttribute('style', `background: ${color};`);
+                }
             }
         });
     }
