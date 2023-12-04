@@ -12,11 +12,14 @@
     </div>
     <div class="main-continer">
         <div class="control-continer">
-            <input id="pixeles" type="range" min="2" max="64">
-            <input type="color" name="color" id="color">
-            <input onclick="setColor('#fff')" type="button" value="Borrador">
-            <button onclick="isRandom()" type="button">Modo Arcoiris</button>
-            <button onclick="gridSize()">Reset</button>
+            <div class="range">
+                <p>Pixel Tamaño</p>
+                <input id="pixeles" type="range" min="2" max="64">
+            </div>
+            <input class="botones" type="color" name="color" id="color">
+            <input class="borrar" onclick="setColor('#fff')" type="button" value="Borrador">
+            <button class="arcoiris" onclick="isRandom()" type="button">Modo Arcoiris</button>
+            <button class="reset" onclick="gridSize()">Reset</button>
         </div>
         <div id="idLienzo" class="lienzo-continer"></div>
     </div>

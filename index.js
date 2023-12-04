@@ -15,7 +15,6 @@ function setupGrid(size) {
     lienzo.style.gridTemplateRows = `repeat(${size}, 1fr)`
     for (let i = 0; i < size * size; i++) {
         const gridElement = document.createElement('div');    
-        gridElement.classList.add('pixelStyle');
         lienzo.appendChild(gridElement);
         gridElement.addEventListener('mouseenter', function(event) {
             if (event.buttons === 1) {
@@ -35,7 +34,7 @@ const gridSize = (size) => {
     setupGrid(size)
 };
 const setColor = (color) => {
-    if(color === "#fff") { // esta condicion es activada por el borrador
+    if(color === "#fff") { // esta condicion es activada pora el borrador
         color = "#fff"
     }
     let padre = document.getElementById('idLienzo');
